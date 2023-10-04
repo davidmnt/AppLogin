@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                     if (user.getText().toString().equals(usuario) && pass.getText().toString().equals(contraseña)) {
                         texto.setText("");
                         comprobacion = user.getText().toString();
-                        comporbacion(login);
+                        mandarOtraPantalla(login);
 
                     } else {
                         comprobacion = "Usuario o contraseña incorrecta";
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void comporbacion(View view){
+    public void mandarOtraPantalla(View view){
         Intent i = new Intent(this, LoginCorrectoActivity.class);
         i.putExtra("USER",comprobacion);
         startActivity(i);
