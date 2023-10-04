@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private String comprobacion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +22,11 @@ public class MainActivity extends AppCompatActivity {
         Button login = findViewById(R.id.enviar);
         TextView texto = findViewById(R.id.error);
 
-        String usuario = "david_mnt";
-        String contraseña = "1234";
+        String usuarioDavid = "david_mnt";
+        String contraseñaDavid = "1234";
+
+        String usuarioRonnie = "ronnie";
+        String contraseñaRonnie = "1234";
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,25 +36,35 @@ public class MainActivity extends AppCompatActivity {
                     comprobacion = "Usuario o contraseña vacio";
                     texto.setText(comprobacion);
 
+                } else if (!user.getText().toString().equals(usuarioDavid) && !pass.getText().toString().equals(contraseñaDavid)) {
+                    comprobacion = "Usuario o contraseña incorrsecto";
+                    texto.setText(comprobacion);
+
                 } else {
 
-                    if (user.getText().toString().equals(usuario) && pass.getText().toString().equals(contraseña)) {
+                    if (user.getText().toString().equals(usuarioDavid) && pass.getText().toString().equals(contraseñaDavid)) {
                         texto.setText("");
                         comprobacion = user.getText().toString();
-                        mandarOtraPantalla(login);
+                        mandarOtraPantallaDavid(login);
 
-                    } else {
-                        comprobacion = "Usuario o contraseña incorrecta";
-                        texto.setText(comprobacion);
+                    } else if (user.getText().toString().equals(usuarioRonnie) && pass.getText().toString().equals(contraseñaRonnie)) {
+                        texto.setText("");
+                        comprobacion = user.getText().toString();
+                        mandarOtraPantallaRonnie(login);
                     }
                 }
             }
         });
     }
 
-    public void mandarOtraPantalla(View view){
+    public void mandarOtraPantallaDavid(View view) {
         Intent i = new Intent(this, LoginCorrectoActivity.class);
-        i.putExtra("USER",comprobacion);
+        i.putExtra("USER", comprobacion);
         startActivity(i);
+    }
+    public void mandarOtraPantallaRonnie(View view) {
+        Intent in = new Intent(this, LoginRonnieActivity.class);
+        in.putExtra("USER", comprobacion);
+        startActivity(in);
     }
 }
