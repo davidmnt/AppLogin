@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
                     comprobacion = "Usuario o contraseña incorrsecto";
                     texto.setText(comprobacion);
 
+                }else if (!user.getText().toString().equals(usuarioRonnie) && !pass.getText().toString().equals(contraseñaRonnie)) {
+                    comprobacion = "Usuario o contraseña incorrecto";
+                    texto.setText(comprobacion);
+
                 } else {
 
                     if (user.getText().toString().equals(usuarioDavid) && pass.getText().toString().equals(contraseñaDavid)) {
