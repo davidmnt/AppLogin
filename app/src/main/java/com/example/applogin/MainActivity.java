@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button login = findViewById(R.id.enviar);
         TextView texto = findViewById(R.id.error);
 
-        String usuarioDavid = "david_mnt";
+        String usuarioDavid = "cbum";
         String contraseñaDavid = "1234";
 
         String usuarioRonnie = "ronnie";
@@ -32,22 +32,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (user.getText().toString().isEmpty() || pass.getText().toString().isEmpty()) {
+                if (user.getText().toString().toLowerCase().isEmpty() || pass.getText().toString().isEmpty()) {
                     comprobacion = "Usuario o contraseña vacio";
                     texto.setText(comprobacion);
 
-                } else if (!user.getText().toString().equals(usuarioDavid) && !pass.getText().toString().equals(contraseñaDavid)) {
-                    comprobacion = "Usuario o contraseña incorrsecto";
+                } else if (!user.getText().toString().toLowerCase().equals(usuarioDavid) || !pass.getText().toString().equals(contraseñaDavid)) {
+                    comprobacion = "Usuario o contraseña incorrecto";
                     texto.setText(comprobacion);
 
                 } else {
 
-                    if (user.getText().toString().equals(usuarioDavid) && pass.getText().toString().equals(contraseñaDavid)) {
+                    if (user.getText().toString().toLowerCase().equals(usuarioDavid) && pass.getText().toString().equals(contraseñaDavid)) {
                         texto.setText("");
                         comprobacion = user.getText().toString();
                         mandarOtraPantallaDavid(login);
 
-                    } else if (user.getText().toString().equals(usuarioRonnie) && pass.getText().toString().equals(contraseñaRonnie)) {
+                    } else if (user.getText().toString().toLowerCase().equals(usuarioRonnie) && pass.getText().toString().equals(contraseñaRonnie)) {
                         texto.setText("");
                         comprobacion = user.getText().toString();
                         mandarOtraPantallaRonnie(login);
