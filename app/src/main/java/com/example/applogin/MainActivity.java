@@ -2,6 +2,7 @@ package com.example.applogin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,11 +23,14 @@ public class MainActivity extends AppCompatActivity {
         Button login = findViewById(R.id.enviar);
         TextView texto = findViewById(R.id.error);
 
+
         String usuarioDavid = "cbum";
         String contraseñaDavid = "1234";
 
         String usuarioRonnie = "ronnie";
         String contraseñaRonnie = "1234";
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,12 +65,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void mandarOtraPantallaDavid(View view) {
+
+
+    private void mandarOtraPantallaDavid(View view) {
         Intent i = new Intent(this, LoginCorrectoActivity.class);
         i.putExtra("USER", comprobacion);
         startActivity(i);
     }
-    public void mandarOtraPantallaRonnie(View view) {
+    private void mandarOtraPantallaRonnie(View view) {
         Intent in = new Intent(this, LoginRonnieActivity.class);
         in.putExtra("USER", comprobacion);
         startActivity(in);

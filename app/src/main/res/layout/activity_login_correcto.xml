@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginCorrectoActivity"
-    >
+    tools:context=".LoginCorrectoActivity">
 
 
     <TextView
@@ -21,225 +20,241 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="490dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="700dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLogin"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLogin">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/perfilFoto"
+                android:layout_width="70dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/perfil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ssdsss"
+                app:layout_constraintStart_toStartOf="@+id/perfilFoto"
+                app:layout_constraintTop_toBottomOf="@+id/perfilFoto"
+                />
+
+            <Button
+                android:id="@+id/botonEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar perfil"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion"
+                app:layout_constraintStart_toStartOf="@+id/descripcion"
+                />
 
 
 
-    <ImageView
-        android:id="@+id/perfilFoto"
-        android:layout_width="70dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/perfil"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/NumeroPublicaciones"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="10"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/publicaciones"
+                app:layout_constraintStart_toEndOf="@+id/perfilFoto"
+                app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+
+            <TextView
+                android:id="@+id/publicaciones"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="Publicaciones"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/perfilFoto"
+                app:layout_constraintStart_toEndOf="@+id/perfilFoto"
+                app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+
+            <TextView
+                android:id="@+id/NumeroSeguidores"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="625"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/publicaciones"
+                app:layout_constraintStart_toEndOf="@+id/NumeroPublicaciones"
+                app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+
+            <TextView
+                android:id="@+id/seguidores"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Seguidores"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/perfilFoto"
+                app:layout_constraintStart_toEndOf="@+id/publicaciones"
+                app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+
+            <TextView
+                android:id="@+id/NumeroSiguiendo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="950"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/publicaciones"
+                app:layout_constraintStart_toEndOf="@+id/NumeroSeguidores"
+                app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+
+            <TextView
+                android:id="@+id/Siguiendo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Siguiendo"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/perfilFoto"
+                app:layout_constraintStart_toEndOf="@+id/seguidores"
+                app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
 
 
-    <TextView
-        android:id="@+id/NumeroPublicaciones"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="10"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/publicaciones"
-        app:layout_constraintStart_toEndOf="@+id/perfilFoto"
-        app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+            <ImageView
+                android:id="@+id/Foto1"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/botonEditar"
+                tools:ignore="NotSibling" />
 
-    <TextView
-        android:id="@+id/publicaciones"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="Publicaciones"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="@+id/perfilFoto"
-        app:layout_constraintStart_toEndOf="@+id/perfilFoto"
-        app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+            <ImageView
+                android:id="@+id/Foto2"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toEndOf="@+id/Foto1"
+                app:layout_constraintTop_toBottomOf="@+id/botonEditar"
+                tools:ignore="NotSibling" />
 
-    <TextView
-        android:id="@+id/NumeroSeguidores"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="625"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/publicaciones"
-        app:layout_constraintStart_toEndOf="@+id/NumeroPublicaciones"
-        app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+            <ImageView
+                android:id="@+id/Foto3"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Foto1" />
 
-    <TextView
-        android:id="@+id/seguidores"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Seguidores"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/perfilFoto"
-        app:layout_constraintStart_toEndOf="@+id/publicaciones"
-        app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+            <ImageView
+                android:id="@+id/Foto4"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toEndOf="@+id/Foto1"
+                app:layout_constraintTop_toBottomOf="@+id/Foto2" />
 
-    <TextView
-        android:id="@+id/NumeroSiguiendo"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="950"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/publicaciones"
-        app:layout_constraintStart_toEndOf="@+id/NumeroSeguidores"
-        app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+            <ImageView
+                android:id="@+id/Foto5"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Foto3" />
 
-    <TextView
-        android:id="@+id/Siguiendo"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Siguiendo"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/perfilFoto"
-        app:layout_constraintStart_toEndOf="@+id/seguidores"
-        app:layout_constraintTop_toTopOf="@+id/perfilFoto" />
+            <ImageView
+                android:id="@+id/Foto6"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toEndOf="@+id/Foto1"
+                app:layout_constraintTop_toBottomOf="@+id/Foto4" />
 
-
-
-    <ImageView
-        android:id="@+id/Foto1"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src="@drawable/cbum"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perfilFoto"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="15dp"
-        tools:ignore="NotSibling" />
-
-    <ImageView
-        android:id="@+id/Foto2"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src="@drawable/cbum"
-        app:layout_constraintStart_toEndOf="@+id/Foto1"
-        app:layout_constraintTop_toBottomOf="@+id/perfilFoto"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="10dp"
-        tools:ignore="NotSibling" />
-
-    <ImageView
-        android:id="@+id/Foto3"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src="@drawable/cbum"
-        app:layout_constraintTop_toBottomOf="@+id/Foto1"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-       />
-
-    <ImageView
-        android:id="@+id/Foto4"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src="@drawable/cbum"
-        app:layout_constraintTop_toBottomOf="@+id/Foto2"
-        app:layout_constraintStart_toEndOf="@+id/Foto1"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-       />
-
-    <ImageView
-        android:id="@+id/Foto5"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src="@drawable/cbum"
-        app:layout_constraintTop_toBottomOf="@+id/Foto3"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        />
-
-    <ImageView
-        android:id="@+id/Foto6"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src="@drawable/cbum"
-        app:layout_constraintTop_toBottomOf="@+id/Foto4"
-        app:layout_constraintStart_toEndOf="@+id/Foto1"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        />
-    <ImageView
-        android:id="@+id/Foto7"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src="@drawable/cbum"
-        app:layout_constraintTop_toBottomOf="@+id/Foto5"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        />
+            <ImageView
+                android:id="@+id/Foto7"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Foto5" />
 
             <ImageView
                 android:id="@+id/Foto8"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintTop_toBottomOf="@+id/Foto6"
-                app:layout_constraintStart_toEndOf="@+id/Foto1"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
-                />
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toEndOf="@+id/Foto1"
+                app:layout_constraintTop_toBottomOf="@+id/Foto6" />
 
             <ImageView
                 android:id="@+id/Foto9"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintTop_toBottomOf="@+id/Foto7"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="15dp"
-                />
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Foto7" />
+
             <ImageView
                 android:id="@+id/Foto10"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintTop_toBottomOf="@+id/Foto8"
-                app:layout_constraintStart_toEndOf="@+id/Foto1"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
-                />
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toEndOf="@+id/Foto1"
+                app:layout_constraintTop_toBottomOf="@+id/Foto8" />
+
             <ImageView
                 android:id="@+id/Foto11"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintTop_toBottomOf="@+id/Foto9"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="15dp"
-                />
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Foto9" />
+
             <ImageView
                 android:id="@+id/Foto12"
                 android:layout_width="160dp"
                 android:layout_height="120dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintTop_toBottomOf="@+id/Foto10"
-                app:layout_constraintStart_toEndOf="@+id/Foto1"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-               android:layout_marginStart="10dp"
-                />
+                android:src="@drawable/cbum"
+                app:layout_constraintStart_toEndOf="@+id/Foto1"
+                app:layout_constraintTop_toBottomOf="@+id/Foto10" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
@@ -259,8 +274,8 @@
         android:id="@+id/casa"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/casa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -269,8 +284,8 @@
         android:id="@+id/lupa"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/lupa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/casa" />
@@ -279,8 +294,8 @@
         android:id="@+id/publicar"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/publicar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lupa" />
@@ -289,8 +304,8 @@
         android:id="@+id/reels"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/reels"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/publicar" />
@@ -299,8 +314,8 @@
         android:id="@+id/perfil"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/perfil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
