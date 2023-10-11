@@ -9,21 +9,19 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class LoginCorrectoActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_correcto);
-        TextView texto = findViewById(R.id.textLogin);
+        TextView textLogin = findViewById(R.id.textLogin);
         Button botonEditPerfil = findViewById(R.id.botonEditar);
-        TextView descripcion = findViewById(R.id.descripcion);
-        String des = getIntent().getStringExtra("descripcion");
+        //TextView descripcion = findViewById(R.id.descripcion);
+
+      /*  String des = getIntent().getStringExtra("descripcion");
         descripcion.setText(des);
-
-
-
+*/
         String user = getIntent().getStringExtra("USER");
-        texto.setText(user);
+        textLogin.setText(user);
 
         botonEditPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +29,6 @@ public class LoginCorrectoActivity extends AppCompatActivity {
                 mandarEditPerfil(botonEditPerfil);
             }
         });
-
     }
 
     private void mandarEditPerfil(View view){

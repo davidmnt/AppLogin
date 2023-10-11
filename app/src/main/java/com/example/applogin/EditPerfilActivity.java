@@ -9,13 +9,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class EditPerfilActivity extends AppCompatActivity {
+
     private String des;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_perfil);
-        TextView cancelar = findViewById(R.id.cancelar);
+      /*  TextView cancelar = findViewById(R.id.cancelar);
         TextView listo = findViewById(R.id.listo);
         EditText rellenarEdit = findViewById(R.id.rellenarEdit);
 
@@ -31,7 +32,7 @@ public class EditPerfilActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
             listoEdit(listo);
-            des = listo.getText().toString();
+            des = rellenarEdit.getText().toString();
             }
         });
 
@@ -46,6 +47,10 @@ public class EditPerfilActivity extends AppCompatActivity {
         Intent in = new Intent(this, LoginCorrectoActivity.class);
         in.putExtra("descripcion",des);
         startActivity(in);
+
+
+       */
+
     }
 
 

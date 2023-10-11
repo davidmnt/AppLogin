@@ -24,7 +24,7 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="630dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLogin">
@@ -206,55 +206,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Foto5" />
 
-            <ImageView
-                android:id="@+id/Foto8"
-                android:layout_width="160dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintStart_toEndOf="@+id/Foto1"
-                app:layout_constraintTop_toBottomOf="@+id/Foto6" />
-
-            <ImageView
-                android:id="@+id/Foto9"
-                android:layout_width="160dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Foto7" />
-
-            <ImageView
-                android:id="@+id/Foto10"
-                android:layout_width="160dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintStart_toEndOf="@+id/Foto1"
-                app:layout_constraintTop_toBottomOf="@+id/Foto8" />
-
-            <ImageView
-                android:id="@+id/Foto11"
-                android:layout_width="160dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Foto9" />
-
-            <ImageView
-                android:id="@+id/Foto12"
-                android:layout_width="160dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/cbum"
-                app:layout_constraintStart_toEndOf="@+id/Foto1"
-                app:layout_constraintTop_toBottomOf="@+id/Foto10" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
