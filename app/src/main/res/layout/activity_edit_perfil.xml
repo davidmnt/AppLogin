@@ -41,4 +41,23 @@
         android:layout_marginEnd="5dp"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripcion:"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintStart_toStartOf="@+id/cancelar"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:id="@+id/rellenarEdit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
