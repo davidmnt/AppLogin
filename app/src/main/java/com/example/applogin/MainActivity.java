@@ -17,24 +17,30 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Definimos todos los objetos que usaremos dentro del xml (parte visual de la aplicacion), para darle funcionamiento
         setContentView(R.layout.activity_main);
         EditText user = findViewById(R.id.user);
         EditText pass = findViewById(R.id.pass);
         Button login = findViewById(R.id.enviar);
         TextView texto = findViewById(R.id.error);
 
-
+        //Usuario de CBUM (persona 1)
         String usuarioDavid = "cbum";
         String contraseñaDavid = "1234";
 
+        //Usuario de RONNIE (persona 2)
         String usuarioRonnie = "ronnie";
         String contraseñaRonnie = "1234";
 
-
+        //Cuando pulsamos el boton Login el codigo comprobara todas las combinaciones posibles buscando errores de inicio, tanto de password como de user
+        //En caso de encontrar algun error lanza un error al usuario si no accede de forma adecuada a la apliacion
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //Condiciones de autentificacion fallida
 
                 if (user.getText().toString().toLowerCase().isEmpty() || pass.getText().toString().isEmpty()) {
                     comprobacion = "Usuario o contraseña vacio";
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
 
+                    //Condiciones de autentificacion correcta
                     if (user.getText().toString().toLowerCase().equals(usuarioDavid) && pass.getText().toString().equals(contraseñaDavid)) {
                         texto.setText("");
                         comprobacion = user.getText().toString();
@@ -66,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Metodos para mandar a la pantalla adecuada de cada user
+    //Estos metodos no se pedian de base en la tarea, pero para ampliar mis conocimientos le añadi intent
+    // y programe una pantalla parecida a la del usuario de instagram
+    //Estos metodos se llaman en cada condicion si esta bien el user y password
 
     private void mandarOtraPantallaDavid(View view) {
         Intent i = new Intent(this, LoginCorrectoActivity.class);

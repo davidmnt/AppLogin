@@ -13,9 +13,6 @@
         android:theme="@style/Theme.AppLogin"
         tools:targetApi="31">
         <activity
-            android:name=".EditPerfilActivity"
-            android:exported="false" />
-        <activity
             android:name=".LoginRonnieActivity"
             android:exported="false" />
         <activity

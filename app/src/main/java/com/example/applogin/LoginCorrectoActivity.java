@@ -14,25 +14,7 @@ public class LoginCorrectoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_correcto);
         TextView textLogin = findViewById(R.id.textLogin);
-        Button botonEditPerfil = findViewById(R.id.botonEditar);
-        //TextView descripcion = findViewById(R.id.descripcion);
 
-      /*  String des = getIntent().getStringExtra("descripcion");
-        descripcion.setText(des);
-*/
-        String user = getIntent().getStringExtra("USER");
-        textLogin.setText(user);
 
-        botonEditPerfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mandarEditPerfil(botonEditPerfil);
-            }
-        });
-    }
-
-    private void mandarEditPerfil(View view){
-        Intent i = new Intent(this, EditPerfilActivity.class);
-        startActivity(i);
     }
 }
